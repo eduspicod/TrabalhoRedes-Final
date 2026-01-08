@@ -28,5 +28,10 @@
         "turma": "FUP",
         "media": 4.5,
         "status": "Prova Final"
+    },
+    {
+        "turma": "REDES DE COMPUTADORES",
+        "media": 6.67,
+        "status": "Prova Final"
     }
 ]
