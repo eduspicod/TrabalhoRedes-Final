@@ -43,7 +43,6 @@ def gerar_relatorio_estatistico():
         if t not in resumo:
             resumo[t] = {"Aprovado": 0, "Prova Final": 0, "Reprovado": 0, "Total": 0, "notas": []}
         
-        # Correção para garantir que a chave existe no dicionário
         if s in resumo[t]:
             resumo[t][s] += 1
         resumo[t]["Total"] += 1
@@ -88,14 +87,12 @@ def handle_tcp_client(conn, addr):
             n2 = msg.get('n2', 0)
             n3 = msg.get('n3', 0)
             
-            # Se n3 for 0, calcula média parcial e predição
             if n3 == 0:
                 media = (n1 + n2) / 2
                 status = "Pendente (Falta N3)"
                 necessario = 21 - (n1 + n2)
                 pred = f"Precisa de {max(0, necessario):.1f} na N3"
             else:
-                # Se tem as 3 notas, calcula a média real
                 media = (n1 + n2 + n3) / 3
                 if media >= 7: status = "Aprovado"
                 elif media >= 4: status = "Prova Final"
@@ -125,7 +122,6 @@ def servico_udp_discovery():
             if data.decode() == "ONDE_ESTA_O_SERVIDOR?":
                 s.sendto("EU_SOU_O_SERVIDOR".encode(), addr)
 
-# Inicialização do Servidor
 print("=== SERVIDOR ACADÊMICO ATIVO (TCP/UDP) ===")
 threading.Thread(target=servico_udp_discovery, daemon=True).start()
 
