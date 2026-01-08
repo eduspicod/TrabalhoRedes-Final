@@ -1,0 +1,32 @@
+[
+    {
+        "turma": "1",
+        "media": 6.5,
+        "status": "Prova Final"
+    },
+    {
+        "turma": "2",
+        "media": 9.0,
+        "status": "Aprovado"
+    },
+    {
+        "turma": "REDES",
+        "media": 9.0,
+        "status": "Aprovado"
+    },
+    {
+        "turma": "REDES",
+        "media": 6.5,
+        "status": "Prova Final"
+    },
+    {
+        "turma": "PERSISTENCIA",
+        "media": 9.0,
+        "status": "Aprovado"
+    },
+    {
+        "turma": "FUP",
+        "media": 4.5,
+        "status": "Prova Final"
+    }
+]
